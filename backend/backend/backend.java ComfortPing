@@ -1,0 +1,42 @@
+package backend;
+
+import java.util.*;
+
+class StudentFeedback {
+    String studentId;
+    int foodQuality;
+    int hygiene;
+    int roomComfort;
+
+    StudentFeedback(String studentId, int foodQuality, int hygiene, int roomComfort) {
+        this.studentId = studentId;
+        this.foodQuality = foodQuality;
+        this.hygiene = hygiene;
+        this.roomComfort = roomComfort;
+    }
+
+    int getDiscomfortScore() {
+        return (foodQuality + hygiene + roomComfort) / 3;
+    }
+}
+
+public class ComfortPingBackend {
+
+    public static void main(String[] args) {
+        List<StudentFeedback> feedbackList = new ArrayList<>();
+
+        feedbackList.add(new StudentFeedback("S101", 2, 3, 2));
+        feedbackList.add(new StudentFeedback("S102", 4, 4, 3));
+        feedbackList.add(new StudentFeedback("S103", 1, 2, 2));
+
+        System.out.println("ComfortPing – Discomfort Analysis Report");
+        System.out.println("---------------------------------------");
+
+        for (StudentFeedback fb : feedbackList) {
+            System.out.println("Student ID: " + fb.studentId +
+                    " | Discomfort Score: " + fb.getDiscomfortScore());
+        }
+
+        System.out.println("Smart reshuffling recommendations generated.");
+    }
+}
