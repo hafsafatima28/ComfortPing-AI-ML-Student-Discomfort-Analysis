@@ -14,6 +14,21 @@ The system collects and processes student feedback data, applies logical rules a
 - Logical analysis using ML-inspired approaches
 - Smart student reshuffling suggestions
 - Data-driven insights for hostel/PG management
+  
+  ## System Architecture (Designed)
+The system is designed with a modular architecture where student feedback data is collected through APIs, processed using backend logic, and analyzed to identify discomfort patterns. The architecture is planned to support scalability using cloud services.
+
+## API & Cloud Exposure
+- REST APIs designed for submitting and retrieving student feedback
+- API structure planned using Amazon API Gateway (learning-level design)
+- Backend processing logic designed to run on AWS Lambda (serverless concept)
+- Amazon S3 planned for storing feedback files and reports
+- Understanding of stateless backend and event-driven processing
+
+## Frontend 
+- Frontend interface concept designed using React / Next.js
+- Forms for student feedback submission
+- Dashboard view for discomfort analysis results
 
 ## Tech Stack
 - Java  
